@@ -3,7 +3,9 @@
 ==================================== */
 
 @media (min-width: 769px) {
-  .main-header, .main-nav {
+  .main-header, 
+  .main-nav,
+  .row {
     display: flex;
 
   }
@@ -12,8 +14,13 @@
     align-items: center;
   }
 
-  
+  .col {
+    flex: 1 50%;
+  }
 
+  .row {
+    flex-wrap: wrap;
+  }
 }
 
 @media (min-width: 1025px) {
@@ -21,7 +28,21 @@
     flex-direction: row;
     justify-content: space-between;
   }
+
+  .col {
+    flex: 1 0;
+  }
+  .tertiary {
+    flex-grow: 1.4;
+  }
+
+  .primary {
+    order: -1;
+  }
+
 }
+
+
 
 .debug {
   border: 1px solid red;
